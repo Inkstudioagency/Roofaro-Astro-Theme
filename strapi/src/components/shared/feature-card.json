@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_feature_cards",
+  "info": {
+    "displayName": "Feature card",
+    "icon": "apps",
+    "description": "Icon + title + short text. Used for service solutions/materials and work impact cards."
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

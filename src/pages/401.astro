@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PasswordForm from '../components/sections/password/PasswordForm.astro';
+import { wfPages } from '../config/site';
+---
+
+<BaseLayout title="Protected page || Roofing Services Astro Theme" wfPage={wfPages.password} layout="bare" noindex>
+  <PasswordForm />
+</BaseLayout>

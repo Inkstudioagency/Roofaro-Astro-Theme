@@ -1,0 +1,38 @@
+---
+import { mediaUrl } from '../../../lib/strapi';
+import type { Work } from '../../../lib/types';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const images = work.buildingImages ?? [];
+---
+
+<section class="section_building">
+  <div class="w-layout-blockcontainer container-main w-container">
+    <div class="building-wrapper">
+      <div class="section-heading-block align-center">
+        <div class="section-title-block max-width-35">
+          <h2 section-title="" class="heading-style-2 text-align-center">{work.buildingTitle}</h2>
+        </div>
+      </div>
+      <div class="building-content-block">
+        <div class="building-image-collection w-dyn-list">
+          {images.length > 0 ? (
+            <div role="list" class="building-image-collection-list w-dyn-items">
+              {images.map((image) => (
+                <div role="listitem" class="building-image-collection-item w-dyn-item w-dyn-repeater-item"><img src={mediaUrl(image)} loading="lazy" reveal-2s="" alt={image.alternativeText ?? ''} class="building-image-item" /></div>
+              ))}
+            </div>
+          ) : (
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+{
+  "name": "roofaro-astro-theme",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Roofaro — a roofing company website theme for Astro with Strapi CMS",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "strapi:dev": "npm --prefix strapi run develop",
+    "strapi:seed": "npm --prefix strapi run seed"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.7"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

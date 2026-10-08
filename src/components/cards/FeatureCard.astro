@@ -1,0 +1,29 @@
+---
+import { mediaUrl } from '../../lib/strapi';
+import type { FeatureCard } from '../../lib/types';
+
+/**
+ * Icon + title + text card. Renders the same markup as the original rich-text cards
+ * (figure > img, h3, p inside `.w-richtext`), so the existing styles apply unchanged.
+ */
+interface Props {
+  card: FeatureCard;
+  /** Wrapper + content classes, e.g. `our-solution-point-block` / `our-solution-point-content`. */
+  blockClass: string;
+  contentClass: string;
+  /** Scroll-reveal attribute name, e.g. `reveal-4s`. */
+  reveal?: string;
+}
+
+const { card, blockClass, contentClass, reveal } = Astro.props;
+---
+
+<div {...(reveal ? { [reveal]: '' } : {})} class={blockClass}>
+  <div class:list={[contentClass, 'w-richtext']}>
+    {card.icon && (
+      <figure class="w-richtext-align-normal w-richtext-figure-type-image"><div><img alt={card.icon.alternativeText ?? ''} src={mediaUrl(card.icon)} loading="lazy" /></div></figure>
+    )}
+    <h3>{card.title}</h3>
+    <p>{card.description}</p>
+  </div>
+</div>

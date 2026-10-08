@@ -1,0 +1,44 @@
+---
+/**
+ * Page hero with the dark photo background.
+ *   default          About (About-Hero-Image)
+ *   service          Services (Service-hero-Image)
+ *   service-details  Service detail: CMS banner image + overlay
+ */
+interface Props {
+  variant?: 'default' | 'service' | 'service-details';
+  subtitle: string;
+  title: string;
+  summary: string;
+  /** Background image URL (service-details only). */
+  backgroundImage?: string;
+}
+
+const { variant = 'default', subtitle, title, summary, backgroundImage } = Astro.props;
+const details = variant === 'service-details';
+---
+
+<section
+  class:list={['section_breadcrumb', variant !== 'default' && variant]}
+  style={backgroundImage ? `background-image:url("${backgroundImage}")` : undefined}
+>
+  <div class:list={['w-layout-blockcontainer container-main', details && 'is-relative', 'w-container']}>
+    <div class="breadcrumb-wrapper">
+      <div class="breadcrumb-content-block">
+        <div class="breadcrumb-heading-block">
+          <div to-top-0s="" class="hero-subtitle-block">
+            <div class="hero-subtitle-dot"></div>
+            <div class="hero-subtitle-text">{subtitle}</div>
+          </div>
+          <div class="breadcrumb-title-block">
+            <h1 hero-title="" class="heading-style-1">{title}</h1>
+          </div>
+        </div>
+        <div to-top-4s="" class:list={['breadcrumb-summary-block', details && 'max-width-24']}>
+          <p class="text-size-large text-color-white">{summary}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {details && <div class="breadcrumb-bg-overlay"></div>}
+</section>

@@ -1,0 +1,70 @@
+---
+import { mediaUrl, mediaSrcset } from '../../../lib/strapi';
+import type { Work } from '../../../lib/types';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const srcset = mediaSrcset(work.bannerImage);
+// Stat values animate with the number counter when they start with a number (e.g. "12 Days").
+const stats = [
+  { label: 'Project Duration', value: work.projectDuration, reveal: 'reveal-0s' },
+  { label: 'Roof Area', value: work.roofArea, reveal: 'reveal-2s' },
+  { label: 'Energy Savings', value: work.energySavings, reveal: 'reveal-4s' },
+  { label: 'Warranty', value: work.warranty, reveal: 'reveal-6s' },
+];
+---
+
+<section class="section_work-details-hero">
+  <div class="section-gap bottom-gap">
+    <div class="w-layout-blockcontainer container-fluid w-container">
+      <div class="work-details-hero-wrapper">
+        <div class="work-details-hero-heading-bg">
+          <div class="woork-details-hero-heading-block bottom-gap-none">
+            <div class="section-heading-text-block">
+              <div to-top-0s="" class="hero-subtitle-block">
+                <div class="hero-subtitle-dot"></div>
+                <div class="hero-subtitle-text">{work.category}</div>
+              </div>
+              <div class="section-title-block max-width-40">
+                <h1 hero-title="" class="heading-style-2 text-color-white">{work.title}</h1>
+              </div>
+            </div>
+            <div to-top-4s="" class="section-summary-block max-width-24 tab-full">
+              <p class="text-size-large text-color-gray-400">{work.summary}</p>
+            </div>
+          </div>
+        </div>
+        <div to-top-6s="" class="work-details-hero-content-block">
+          <div class="work-details-hero-image-block"><img src={mediaUrl(work.bannerImage)} loading="lazy" alt={work.bannerImage?.alternativeText ?? work.title} sizes={srcset ? '(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px' : undefined} srcset={srcset} class="work-details-hero-image" /></div>
+          <div class="work-details-hero-info-block">
+            {stats.map((stat) => (
+              <div {...{ [stat.reveal]: '' }} class="work-details-single-info-block">
+                <div class="work-details-info-text-block">
+                  <p class="text-size-small text-weight-medium">{stat.label}</p>
+                </div>
+                <div class="work-details-info-number-block">
+                  <div class="work-details-info-number _wf-counter">{stat.value}</div>
+                  <div class="work-details-info-icon w-embed"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <g clip-path="url(#clip0_223_5977)">
+                        <path d="M22.6663 9.33594L9.33301 22.6693" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.667 9.33594H22.667V21.3359" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_223_5977">
+                          <rect width="32" height="32" fill="currentColor"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

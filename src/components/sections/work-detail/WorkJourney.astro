@@ -1,0 +1,60 @@
+---
+import { mediaUrl, mediaSrcset } from '../../../lib/strapi';
+import type { StrapiMedia, Work } from '../../../lib/types';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const sizes = '(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px';
+const img = (media: StrapiMedia | null) => {
+  const srcset = mediaSrcset(media);
+  return { src: mediaUrl(media), srcset, sizes: srcset ? sizes : undefined, alt: media?.alternativeText ?? '' };
+};
+const challenge = img(work.challengeImage);
+const approach = img(work.approachImage);
+---
+
+<section class="section_work-journey">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="work-journey-wrapper">
+        <div class="work-journey-content-block">
+          <div class="work-journey-text-block">
+            <div class="section-heading-text-block">
+              <div reveal-0s="" class="section-subtitle-block bottom-space">
+                <div class="subtitle-dot"></div>
+                <p class="subtitle-text">THE CHALLENGE</p>
+              </div>
+              <div class="section-title-block">
+                <h2 section-title="" class="heading-style-3">{work.challengeTitle}</h2>
+              </div>
+            </div>
+            <div reveal-2s="" class="section-summary-block top-space">
+              <p class="text-size-regular">{work.challengeSummary}</p>
+            </div>
+          </div>
+          <div reveal-4s="" class="work-journey-image-block"><img src={challenge.src} loading="lazy" alt={challenge.alt} sizes={challenge.sizes} srcset={challenge.srcset} class="work-journey-image" /></div>
+        </div>
+        <div class="work-journey-content-block">
+          <div reveal-0s="" class="work-journey-image-block"><img src={approach.src} loading="lazy" alt={approach.alt} sizes={approach.sizes} srcset={approach.srcset} class="work-journey-image" /></div>
+          <div class="work-journey-text-block">
+            <div class="section-heading-text-block">
+              <div reveal-0s="" class="section-subtitle-block bottom-space">
+                <div class="subtitle-dot"></div>
+                <p class="subtitle-text">OUR APPROACH</p>
+              </div>
+              <div class="section-title-block">
+                <h2 section-title="" class="heading-style-3">{work.approachTitle}</h2>
+              </div>
+            </div>
+            <div reveal-2s="" class="section-summary-block top-space">
+              <p class="text-size-regular">{work.approachSummary}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

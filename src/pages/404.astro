@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NotFound from '../components/sections/not-found/NotFound.astro';
+import { wfPages } from '../config/site';
+---
+
+<BaseLayout title="Not Found || Roofing Services Astro Theme" wfPage={wfPages.notFound} layout="utility" noindex>
+  <NotFound />
+</BaseLayout>

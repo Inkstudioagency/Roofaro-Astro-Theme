@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import UtilityHero from '../components/sections/style-guide/UtilityHero.astro';
+import StyleGuide from '../components/sections/style-guide/StyleGuide.astro';
+import Cta from '../components/sections/shared/Cta.astro';
+import { wfPages } from '../config/site';
+---
+
+<BaseLayout title="Style Guide || Roofing Services Astro Theme" wfPage={wfPages.styleGuide} noindex>
+  <UtilityHero />
+  <StyleGuide />
+  <Cta />
+</BaseLayout>

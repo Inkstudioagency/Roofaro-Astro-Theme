@@ -1,0 +1,55 @@
+---
+import Button from '../../ui/Button.astro';
+import { mediaUrl } from '../../../lib/strapi';
+import type { Service } from '../../../lib/types';
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+const images = service.overviewImages ?? [];
+---
+
+<section class="section_service-overview">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div to-top-6s="" class="service-details-wrapper">
+        <div class="service-details-overview-block">
+          <div class="service-details-subtitle-block">
+            <div class="section-subtitle-block">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text">OVERVIEW</p>
+            </div>
+          </div>
+          <div class="service-details-overview-title-block">
+            <h2 class="heading-style-4 scroll-animation text-align-center">{service.overviewTitle}</h2>
+          </div>
+          <div reveal-2s="" class="service-details-overview-image-block">
+            <div class="service-overview-image-collection w-dyn-list">
+              {images.length > 0 ? (
+                <div role="list" class="service-overview-image-collection-list w-dyn-items">
+                  {images.map((image) => (
+                    <div role="listitem" class="service-overview-image-collection-item w-dyn-item w-dyn-repeater-item">
+                      <div reveal-2s="" class="service-overview-image-item-block"><img src={mediaUrl(image)} loading="lazy" alt={image.alternativeText ?? ''} class="service-overview-image-item" /></div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div class="w-dyn-empty">
+                  <div>No items found.</div>
+                </div>
+              )}
+            </div>
+          </div>
+          <div reveal-2s="" class="service-details-overview-summery-block">
+            <p class="text-size-regular text-align-center">{service.overviewSummary}</p>
+          </div>
+          <div reveal-2s="" class="service-details-overview-button-block">
+            <Button kind="primary" variant="v2" href="/contact" text="Contact Now" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

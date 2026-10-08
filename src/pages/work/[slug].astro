@@ -1,0 +1,41 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorkHero from '../../components/sections/work-detail/WorkHero.astro';
+import Building from '../../components/sections/work-detail/Building.astro';
+import ProjectOverview from '../../components/sections/work-detail/ProjectOverview.astro';
+import WorkJourney from '../../components/sections/work-detail/WorkJourney.astro';
+import ProjectImpact from '../../components/sections/work-detail/ProjectImpact.astro';
+import Gallery from '../../components/sections/work-detail/Gallery.astro';
+import Cta from '../../components/sections/shared/Cta.astro';
+import { wfPages } from '../../config/site';
+import { getWorks } from '../../lib/cms';
+import { mediaUrl } from '../../lib/strapi';
+import type { Work } from '../../lib/types';
+
+export const getStaticPaths = (async () => {
+  const works = await getWorks();
+  return works.map((work) => ({ params: { slug: work.slug }, props: { work } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+---
+
+<BaseLayout
+  title={`${work.title} || Roofing Services Astro Theme`}
+  description={work.summary}
+  image={mediaUrl(work.bannerImage) || undefined}
+  wfPage={wfPages.workDetail}
+>
+  <WorkHero work={work} />
+  <Building work={work} />
+  <ProjectOverview work={work} />
+  <WorkJourney work={work} />
+  <ProjectImpact work={work} />
+  <Gallery />
+  <Cta />
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/sections/shared/Breadcrumb.astro';
+import ServiceOverview from '../../components/sections/service-detail/ServiceOverview.astro';
+import OurSolution from '../../components/sections/service-detail/OurSolution.astro';
+import MaterialOptions from '../../components/sections/service-detail/MaterialOptions.astro';
+import Process from '../../components/sections/shared/Process.astro';
+import Faq from '../../components/sections/shared/Faq.astro';
+import Cta from '../../components/sections/shared/Cta.astro';
+import { wfPages } from '../../config/site';
+import { getServices } from '../../lib/cms';
+import { mediaUrl } from '../../lib/strapi';
+import type { Service } from '../../lib/types';
+
+export const getStaticPaths = (async () => {
+  const services = await getServices();
+  return services.map((service) => ({ params: { slug: service.slug }, props: { service } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+const banner = mediaUrl(service.bannerImage);
+---
+
+<BaseLayout
+  title={`${service.name} || Roofing Services Astro Theme`}
+  description={service.summary}
+  image={banner || undefined}
+  wfPage={wfPages.serviceDetail}
+>
+  <Breadcrumb variant="service-details" subtitle="SERVICE DETAILS" title={service.name} summary={service.summary} backgroundImage={banner || undefined} />
+  <ServiceOverview service={service} />
+  <OurSolution service={service} />
+  <MaterialOptions service={service} />
+  <Process />
+  <Faq />
+  <Cta />
+</BaseLayout>

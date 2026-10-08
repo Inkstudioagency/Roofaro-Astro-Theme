@@ -1,0 +1,49 @@
+---
+import TeamCard from '../../cards/TeamCard.astro';
+import { team } from '../../../data/team';
+---
+
+<section class="section_team">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="team-wrapper">
+        <div class="section-heading-block">
+          <div reveal-0s="" class="section-subtitle-block bottom-space">
+            <div class="subtitle-dot"></div>
+            <p class="subtitle-text">OUR TEAM</p>
+          </div>
+          <div class="section-title-block max-width-35">
+            <h2 section-title="" class="heading-style-2">The Professionals Behind Every Protected Property.</h2>
+          </div>
+        </div>
+        <div class="team-content-block is-desktop">
+          {team.map((member) => <TeamCard member={member} reveal="reveal-2s" />)}
+        </div>
+        <div class="team-content-block is-mobile">
+          <div data-delay="4000" data-animation="slide" class="mobile-slider-block w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+            <div class="mobile-slider-mask w-slider-mask">
+              {team.filter((member) => member.mobile !== false).map((member) => (
+                <div class="mobile-slide-block w-slide">
+                  <TeamCard member={member} reveal="to-top-4" />
+                </div>
+              ))}
+            </div>
+            <div class="mobile-slider-arrow left w-slider-arrow-left" aria-label="Previous team member">
+              <div class="mobile-slider-icon w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M14 8L2 8M8 2L2 8L8 14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="mobile-slider-arrow right w-slider-arrow-right" aria-label="Next team member">
+              <div class="mobile-slider-icon w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 8H14M8 14L14 8L8 2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="display-none w-slider-nav w-round w-num"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

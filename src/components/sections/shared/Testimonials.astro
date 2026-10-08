@@ -1,0 +1,74 @@
+---
+import { testimonials } from '../../../data/testimonials';
+---
+
+<section class="section_testimonial">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="testimonial-wrapper">
+        <div class="section-heading-block bottom-space-btwn">
+          <div class="section-heading-text-block">
+            <div reveal-0s="" class="section-subtitle-block bottom-space">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text">TESTIMONIALS</p>
+            </div>
+            <div class="section-title-block max-width-24">
+              <h2 section-title="" class="heading-style-2 title-animation">Real Stories From Protected Homes</h2>
+            </div>
+          </div>
+          <div reveal-2s="" class="section-summary-block max-width-22">
+            <p class="text-size-large">Discover roofing transformations that revive damaged buildings with precision and lasting craftsmanship.</p>
+          </div>
+        </div>
+        <div class="testimonial-content-block">
+          <div data-delay="4000" data-animation="slide" class="testimonial-slider-block w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+            <div reveal-4s="" class="testimonial-slider-mask w-slider-mask">
+              {testimonials.map((t) => (
+                <div class="testimonial-slide-block w-slide">
+                  <div class="testimonial-slide-content">
+                    <div class="testimonial-slide-image-block"><img loading="lazy" src={t.image} alt={t.name} class="testimonial-slide-image" /></div>
+                    <div class="testimonial-slide-content-block">
+                      <div class="testimonial-text-block">
+                        <div class="testimonial-text">{t.quote}</div>
+                      </div>
+                      <div class="testimonial-client-block">
+                        <div class="testimonial-client-info-block">
+                          <p class="text-size-xlarge">{t.name}</p>
+                          <p class="text-size-small">{t.location}</p>
+                        </div>
+                        <div class="testimonial-client-rating-block">
+                          <div class="client-rating-title-block">
+                            <p class="text-size-small">Grade</p>
+                          </div>
+                          <div class="client-rating-number-block">
+                            <p class="text-size-regular text-weight-semibold heading-text-color">{t.rating}</p>
+                            <div class="client-rating-star-block">
+                              {Array.from({ length: 5 }, () => <img loading="lazy" src="/images/Star-Icon-2.svg" alt="" class="client-rating-star" />)}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="testimonial-slider-arrow left w-slider-arrow-left" aria-label="Previous testimonial">
+              <div class="testimonial-slider-icon w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M14 8L2 8M8 2L2 8L8 14" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="testimonial-slider-arrow right w-slider-arrow-right" aria-label="Next testimonial">
+              <div class="testimonial-slider-icon w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M2 8H14M8 14L14 8L8 2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="display-none w-slider-nav w-round"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

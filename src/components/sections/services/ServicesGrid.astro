@@ -1,0 +1,42 @@
+---
+import ServiceCard from '../../cards/ServiceCard.astro';
+import { getServices } from '../../../lib/cms';
+
+const services = await getServices();
+---
+
+<section to-top-6s="" class="section_services">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="services-wrapper">
+        <div class="section-heading-block bottom-space-btwn">
+          <div class="section-heading-text-block">
+            <div reveal-0s="" class="section-subtitle-block bottom-space">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text">OUR CORE SERVICES</p>
+            </div>
+            <div class="section-title-block max-width-40">
+              <h2 section-title="" class="heading-style-2 title-animation">Complete Roofing Solutions Under One Structure</h2>
+            </div>
+          </div>
+          <div reveal-2s="" class="section-summary-block max-width-20">
+            <p class="text-size-large">Roofaro provides reliable roofing systems for homes and commercial properties across all industries.</p>
+          </div>
+        </div>
+        <div reveal-4s="" class="services-content-block-two">
+          <div class="services-collection-block-two w-dyn-list">
+            {services.length > 0 ? (
+              <div role="list" class="services-collection-list-two w-dyn-items">
+                {services.map((service) => <ServiceCard service={service} total={services.length} variant="grid" />)}
+              </div>
+            ) : (
+              <div class="w-dyn-empty">
+                <div>No items found.</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

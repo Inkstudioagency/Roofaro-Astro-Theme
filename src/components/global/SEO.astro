@@ -1,0 +1,39 @@
+---
+import { site } from '../../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Absolute URL or a path inside /public. */
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title = site.defaultTitle,
+  description = site.defaultDescription,
+  image = site.ogImage,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const base = Astro.site ?? new URL(site.url);
+const canonical = new URL(Astro.url.pathname, base).toString();
+const imageUrl = new URL(image, base).toString();
+---
+
+<title>{title}</title>
+<meta content={description} name="description" />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex" />}
+<meta content={title} property="og:title" />
+<meta content={description} property="og:description" />
+<meta content={imageUrl} property="og:image" />
+<meta content={canonical} property="og:url" />
+<meta content={site.name} property="og:site_name" />
+<meta content={title} name="twitter:title" />
+<meta content={description} name="twitter:description" />
+<meta content={imageUrl} name="twitter:image" />
+<meta property="og:type" content={type} />
+<meta content="summary_large_image" name="twitter:card" />

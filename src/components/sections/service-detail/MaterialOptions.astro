@@ -1,0 +1,40 @@
+---
+import FeatureCard from '../../cards/FeatureCard.astro';
+import type { Service } from '../../../lib/types';
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+// Staggered reveal, as in the original: 2s, 4s, 6s, 8s, then repeating.
+const reveals = ['reveal-2s', 'reveal-4s', 'reveal-6s', 'reveal-8s'];
+---
+
+<section class="section_material">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="material-wrapper">
+        <div class="section-heading-block bottom-space-btwn">
+          <div class="section-heading-text-block">
+            <div reveal-0s="" class="section-subtitle-block bottom-space">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text text-color-white">MATERIAL OPTIONS</p>
+            </div>
+            <div class="section-title-block max-width-36">
+              <h2 section-title="" class="heading-style-2 text-color-white">{service.materialTitle}</h2>
+            </div>
+          </div>
+          <div reveal-2s="" class="section-summary-block max-width-21">
+            <p class="text-size-large text-color-gray-400">{service.materialSummary}</p>
+          </div>
+        </div>
+        <div class="material-content-block">
+          {service.materialCards.map((card, i) => (
+            <FeatureCard card={card} blockClass="material-card-block" contentClass="material-card-content" reveal={reveals[i % reveals.length]} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import Button from '../ui/Button.astro';
+import { mediaUrl } from '../../lib/strapi';
+import { renderBlocks } from '../../lib/blocks';
+import { padNumber, serviceHref } from '../../lib/cms';
+import type { Service } from '../../lib/types';
+
+interface Props {
+  service: Service;
+  /** Total number of services, shown as "01/04". */
+  total: number;
+  /** `slider` = Home carousel card, `grid` = Services page card (the `-two` classes). */
+  variant?: 'slider' | 'grid';
+}
+
+const { service, total, variant = 'slider' } = Astro.props;
+const two = variant === 'grid' ? '-two' : '';
+const href = serviceHref(service);
+---
+
+<div role="listitem" class="services-collection-item w-dyn-item">
+  <div class={`services-item-card-block${two}`}>
+    <div class={`services-item-heading-block${two}`}>
+      <div class="services-item-number-block">
+        <p class="text-size-regular text-weight-medium text-color-black">{padNumber(service.number)}</p>
+        <p class="text-size-regular text-weight-medium">/{padNumber(total)}</p>
+      </div>
+      <a aria-label={service.name} href={href} class="services-item-title-block w-inline-block">
+        <h3 class="service-item-title">{service.name}</h3>
+      </a>
+    </div>
+    <div class={`services-item-image-block${two}`}>
+      <img src={mediaUrl(service.thumbnail)} loading="lazy" alt={service.thumbnail?.alternativeText ?? service.name} class="services-item-image" />
+      <div class="services-item-stat-block">
+        <div class="services-stat-number _wf-counter">{service.statNumber}</div>
+        <p>{service.statText}</p>
+      </div>
+    </div>
+    <div class="services-item-content-block">
+      <div class="services-content-top-block">
+        <p class="text-size-large text-color-black">{service.summary}</p>
+      </div>
+      <div class="services-content-bottom-block">
+        <div class="services-item-keypoint-block">
+          <div class="services-item-keypoint w-richtext" set:html={renderBlocks(service.keyPoints)} />
+        </div>
+        <div class="services-item-button-block">
+          <Button kind="primary" variant="v2" href={href} text="View Service" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

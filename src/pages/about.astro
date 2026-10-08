@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/sections/shared/Breadcrumb.astro';
+import OurStory from '../components/sections/about/OurStory.astro';
+import OurJourney from '../components/sections/about/OurJourney.astro';
+import Purpose from '../components/sections/about/Purpose.astro';
+import OurValues from '../components/sections/about/OurValues.astro';
+import Team from '../components/sections/about/Team.astro';
+import Testimonials from '../components/sections/shared/Testimonials.astro';
+import Faq from '../components/sections/shared/Faq.astro';
+import Cta from '../components/sections/shared/Cta.astro';
+import { wfPages } from '../config/site';
+---
+
+<BaseLayout title="About || Roofing Services Astro Theme" wfPage={wfPages.about}>
+  <Breadcrumb
+    subtitle="PEAKSHIELD ROOFING"
+    title="Crafted with care. Trusted for generations."
+    summary="For 20 years, PeakShield has provided trusted roofing solutions for homes and businesses."
+  />
+  <OurStory />
+  <OurJourney />
+  <Purpose />
+  <OurValues />
+  <Team />
+  <Testimonials />
+  <Faq />
+  <Cta />
+</BaseLayout>

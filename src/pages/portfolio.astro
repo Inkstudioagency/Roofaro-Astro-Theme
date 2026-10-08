@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/sections/shared/Breadcrumb.astro';
+import ServicesGrid from '../components/sections/services/ServicesGrid.astro';
+import Cta from '../components/sections/shared/Cta.astro';
+import { wfPages } from '../config/site';
+---
+
+<BaseLayout title="Services || Roofing Services Astro Theme" wfPage={wfPages.services}>
+  <Breadcrumb
+    variant="service"
+    subtitle="OUR SERVICES"
+    title="Crafted with care. Trusted for generations."
+    summary="For 20 years, PeakShield has provided trusted roofing solutions for homes and businesses."
+  />
+  <ServicesGrid />
+  <Cta />
+</BaseLayout>

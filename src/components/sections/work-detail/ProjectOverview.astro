@@ -1,0 +1,25 @@
+---
+import { mediaUrl } from '../../../lib/strapi';
+import type { Work } from '../../../lib/types';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+---
+
+<section class="section-overview">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="overview-wrapper">
+        <div class="work-details-overview-block">
+          <p section-title="" class="heading-style-6">Project Overview</p>
+        </div>
+        <div reveal-4s="" class="work-overview-text-block"><img src={mediaUrl(work.overviewImage)} loading="lazy" reveal-2s="" alt={work.overviewImage?.alternativeText ?? ''} class="work-details-overview-iamge" />
+          <h2 reveal-4s="" class="heading-style-5">{work.overview}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

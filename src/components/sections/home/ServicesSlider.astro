@@ -1,0 +1,58 @@
+---
+import ServiceCard from '../../cards/ServiceCard.astro';
+import { getServices } from '../../../lib/cms';
+
+const services = await getServices();
+---
+
+<section class="section_services">
+  <div class="section-gap bottom-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="services-wrapper">
+        <div class="section-heading-block bottom-space-btwn">
+          <div class="section-heading-text-block">
+            <div reveal-0s="" class="section-subtitle-block bottom-space">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text">OUR CORE SERVICES</p>
+            </div>
+            <div class="section-title-block max-width-40">
+              <h2 section-title="" class="heading-style-2 title-animation">Complete Roofing Solutions Under One Structure</h2>
+            </div>
+          </div>
+          <div reveal-2s="" class="section-summary-block max-width-20">
+            <p class="text-size-large">Roofaro provides reliable roofing systems for homes and commercial properties across all industries.</p>
+          </div>
+        </div>
+        <div reveal-4s="" class="services-content-block">
+          <!-- One slide per service (Strapi → Service, ordered by number). Slider runtime: webflow.js. -->
+          <div data-delay="4000" data-animation="slide" class="services-slider-block w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+            <div class="services-slider-mask w-slider-mask">
+              {services.map((service) => (
+                <div class="services-slide-block w-slide">
+                  <div class="services-collection-block w-dyn-list">
+                    <div role="list" class="services-collection-list w-dyn-items">
+                      <ServiceCard service={service} total={services.length} />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="services-arrow-block left w-slider-arrow-left" aria-label="Previous service">
+              <div class="services-arrow-icon left w-embed"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M0 7.53027H14M7 14.5303L14 7.53027L7 0.530273" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="services-arrow-block w-slider-arrow-right" aria-label="Next service">
+              <div class="services-arrow-icon w-embed"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M0 7.53027H14M7 14.5303L14 7.53027L7 0.530273" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="display-none w-slider-nav w-round w-num"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

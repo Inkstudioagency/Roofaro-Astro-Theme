@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "Work",
+    "description": "Case studies: Home \"Works\" list (newest first) and /work/[slug] detail pages."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "summary": { "type": "text", "required": true },
+    "category": { "type": "string", "required": true },
+    "thumbnail": { "type": "media", "multiple": false, "required": true, "allowedTypes": ["images"] },
+    "bannerImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "projectDuration": { "type": "string" },
+    "roofArea": { "type": "string" },
+    "energySavings": { "type": "string" },
+    "warranty": { "type": "string" },
+    "buildingTitle": { "type": "string" },
+    "buildingImages": { "type": "media", "multiple": true, "allowedTypes": ["images"] },
+    "overview": { "type": "text" },
+    "overviewImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "challengeTitle": { "type": "string" },
+    "challengeSummary": { "type": "text" },
+    "challengeImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "approachTitle": { "type": "string" },
+    "approachSummary": { "type": "text" },
+    "approachImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "impactTitle": { "type": "string" },
+    "impactSummary": { "type": "text" },
+    "impactCards": { "type": "component", "repeatable": true, "component": "shared.feature-card" }
+  }
+}

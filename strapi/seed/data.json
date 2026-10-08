@@ -1,0 +1,826 @@
+{
+  "services": [
+    {
+      "name": "Residential Roofing",
+      "slug": "residential-roofing",
+      "number": 4,
+      "summary": "Keep your home safe and stylish with our roofing solutions! Whether you need a new roof or a complete replacement, we’ve got you covered for years to come.",
+      "thumbnail": {
+        "file": "Service-Thumbnail-1-7.webp",
+        "alt": "Residential Roofing",
+        "width": 560,
+        "height": 540
+      },
+      "keyPoints": "<p>Key Highlights</p><ul><li>New Roof Installation</li><li>Roof Repair &amp; Replacement</li><li>Leak Detection</li><li>Storm Protection Upgrades</li></ul>",
+      "statNumber": "48hr",
+      "statText": "Average Turnaround",
+      "bannerImage": {
+        "file": "Service-Banner-Image-2-3.webp",
+        "alt": "",
+        "width": 1440,
+        "height": 578
+      },
+      "overviewTitle": "At Roofaro, we deliver residential roofing solutions designed around durability, safety, and curb appeal. Whether you're building a new home, replacing an aging roof, or repairing storm damage, our certified specialists ensure every project is completed with precision and care.",
+      "overviewImages": [
+        {
+          "file": "d18f9221-b5e3-4e96-8441-72756ffee6a3.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Overview-Image-1-p-130x130q80.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Details-Image-1.webp",
+          "alt": "",
+          "width": 444,
+          "height": 376
+        }
+      ],
+      "overviewSummary": "Every roofing system is designed for durability, energy efficiency, and a beautiful home exterior you’ll love.",
+      "solutionTitle": "Complete Residential Roofing Services",
+      "solutionSummary": "Everything your home needs for seamless installation and long-term protection solutions.",
+      "solutionImage": {
+        "file": "Our-Solution-Image.webp",
+        "alt": "",
+        "width": 600,
+        "height": 400
+      },
+      "solutionCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1.svg",
+            "alt": ""
+          },
+          "title": "Roof Repairs",
+          "description": "From small leaks to structural issues, we restore roof integrity before minor damage becomes major expense."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3.svg",
+            "alt": ""
+          },
+          "title": "Storm Damage Restoration",
+          "description": "Quick and reliable recovery solutions after wind, hail, heavy rain, or unexpected weather damage."
+        }
+      ],
+      "materialTitle": "Roofing Systems Designed for Every Home",
+      "materialSummary": "Choose the right roofing solution built around your home’s style, climate, and long-term protection needs.",
+      "materialCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4.svg",
+            "alt": ""
+          },
+          "title": "Asphalt Shingle Roofing",
+          "description": "An ideal blend of affordability, durability, and design for modern family homes."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-2.svg",
+            "alt": ""
+          },
+          "title": "Metal Roofing",
+          "description": "Engineered for exceptional strength, energy efficiency, and year-round weather resistance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-2.svg",
+            "alt": ""
+          },
+          "title": "Tile Roofing",
+          "description": "Timeless architectural beauty paired with outstanding durability and long-lasting performance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-2.svg",
+            "alt": ""
+          },
+          "title": "Flat Roofing",
+          "description": "Clean, modern roofing systems designed for contemporary homes and functional outdoor spaces."
+        }
+      ]
+    },
+    {
+      "name": "Retail Roofing",
+      "slug": "retail-roofing",
+      "number": 3,
+      "summary": "Create a safe, professional customer environment with roofing systems designed for retail spaces, shopping centers, and storefront properties where appearance meets performance.",
+      "thumbnail": {
+        "file": "Service-Thumbnail-3-2.webp",
+        "alt": "Retail Roofing",
+        "width": 560,
+        "height": 540
+      },
+      "keyPoints": "<p>Key Highlights</p><ul><li>Shopping Center Roofing</li><li>Storefront Protection</li><li>Fast Installation Scheduling</li><li>Minimal Business Interruption</li></ul>",
+      "statNumber": "18%",
+      "statText": "Energy Savings Avg.",
+      "bannerImage": {
+        "file": "Service-Banner-Image-3-1.webp",
+        "alt": "",
+        "width": 1440,
+        "height": 578
+      },
+      "overviewTitle": "At Roofaro, we deliver residential roofing solutions designed around durability, safety, and curb appeal. Whether you're building a new home, replacing an aging roof, or repairing storm damage, our certified specialists ensure every project is completed with precision and care.",
+      "overviewImages": [
+        {
+          "file": "d18f9221-b5e3-4e96-8441-72756ffee6a3.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Overview-Image-1-p-130x130q80.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Details-Image-1.webp",
+          "alt": "",
+          "width": 444,
+          "height": 376
+        }
+      ],
+      "overviewSummary": "Every roofing system is designed for durability, energy efficiency, and a beautiful home exterior you’ll love.",
+      "solutionTitle": "Complete Residential Roofing Services",
+      "solutionSummary": "Everything your home needs for seamless installation and long-term protection solutions.",
+      "solutionImage": {
+        "file": "Our-Solution-Image.webp",
+        "alt": "",
+        "width": 600,
+        "height": 400
+      },
+      "solutionCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1.svg",
+            "alt": ""
+          },
+          "title": "Roof Repairs",
+          "description": "From small leaks to structural issues, we restore roof integrity before minor damage becomes major expense."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3.svg",
+            "alt": ""
+          },
+          "title": "Storm Damage Restoration",
+          "description": "Quick and reliable recovery solutions after wind, hail, heavy rain, or unexpected weather damage."
+        }
+      ],
+      "materialTitle": "Roofing Systems Designed for Every Home",
+      "materialSummary": "Choose the right roofing solution built around your home’s style, climate, and long-term protection needs.",
+      "materialCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4.svg",
+            "alt": ""
+          },
+          "title": "Asphalt Shingle Roofing",
+          "description": "An ideal blend of affordability, durability, and design for modern family homes."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-2.svg",
+            "alt": ""
+          },
+          "title": "Metal Roofing",
+          "description": "Engineered for exceptional strength, energy efficiency, and year-round weather resistance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-2.svg",
+            "alt": ""
+          },
+          "title": "Tile Roofing",
+          "description": "Timeless architectural beauty paired with outstanding durability and long-lasting performance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-2.svg",
+            "alt": ""
+          },
+          "title": "Flat Roofing",
+          "description": "Clean, modern roofing systems designed for contemporary homes and functional outdoor spaces."
+        }
+      ]
+    },
+    {
+      "name": "Industrial Roofing",
+      "slug": "industrial-roofing",
+      "number": 2,
+      "summary": "Keep your home safe and stylish with our roofing solutions! Whether you need a new roof or a complete replacement, we’ve got you covered for years to come.",
+      "thumbnail": {
+        "file": "Service-Thumbnail-2-4.webp",
+        "alt": "Industrial Roofing",
+        "width": 560,
+        "height": 540
+      },
+      "keyPoints": "<p>Key Highlights</p><ul><li>Warehouse Roofing</li><li>Factory Roof Systems</li><li>Heat &amp; Chemical Resistance</li><li>Structural Reinforcement</li></ul>",
+      "statNumber": "2.5M+",
+      "statText": "Sq Ft Installed",
+      "bannerImage": {
+        "file": "Service-Banner-Image-4.webp",
+        "alt": "",
+        "width": 1440,
+        "height": 578
+      },
+      "overviewTitle": "At Roofaro, we deliver residential roofing solutions designed around durability, safety, and curb appeal. Whether you're building a new home, replacing an aging roof, or repairing storm damage, our certified specialists ensure every project is completed with precision and care.",
+      "overviewImages": [
+        {
+          "file": "d18f9221-b5e3-4e96-8441-72756ffee6a3.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Overview-Image-1-p-130x130q80.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Details-Image-1.webp",
+          "alt": "",
+          "width": 444,
+          "height": 376
+        }
+      ],
+      "overviewSummary": "Every roofing system is designed for durability, energy efficiency, and a beautiful home exterior you’ll love.",
+      "solutionTitle": "Complete Residential Roofing Services",
+      "solutionSummary": "Everything your home needs for seamless installation and long-term protection solutions.",
+      "solutionImage": {
+        "file": "Our-Solution-Image.webp",
+        "alt": "",
+        "width": 600,
+        "height": 400
+      },
+      "solutionCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1.svg",
+            "alt": ""
+          },
+          "title": "Roof Repairs",
+          "description": "From small leaks to structural issues, we restore roof integrity before minor damage becomes major expense."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3.svg",
+            "alt": ""
+          },
+          "title": "Storm Damage Restoration",
+          "description": "Quick and reliable recovery solutions after wind, hail, heavy rain, or unexpected weather damage."
+        }
+      ],
+      "materialTitle": "Roofing Systems Designed for Every Home",
+      "materialSummary": "Choose the right roofing solution built around your home’s style, climate, and long-term protection needs.",
+      "materialCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4.svg",
+            "alt": ""
+          },
+          "title": "Asphalt Shingle Roofing",
+          "description": "An ideal blend of affordability, durability, and design for modern family homes."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-2.svg",
+            "alt": ""
+          },
+          "title": "Metal Roofing",
+          "description": "Engineered for exceptional strength, energy efficiency, and year-round weather resistance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-2.svg",
+            "alt": ""
+          },
+          "title": "Tile Roofing",
+          "description": "Timeless architectural beauty paired with outstanding durability and long-lasting performance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-2.svg",
+            "alt": ""
+          },
+          "title": "Flat Roofing",
+          "description": "Clean, modern roofing systems designed for contemporary homes and functional outdoor spaces."
+        }
+      ]
+    },
+    {
+      "name": "Commercial Roofing",
+      "slug": "commercial-roofing",
+      "number": 1,
+      "summary": "We've got top-notch roofing solutions designed for offices, businesses, and mixed-use spaces that cut down on downtime while boosting durability and energy efficiency.",
+      "thumbnail": {
+        "file": "Service-Thumbnail-6.webp",
+        "alt": "Commercial Roofing",
+        "width": 560,
+        "height": 540
+      },
+      "keyPoints": "<p>Key Highlights</p><ul><li>Warehouse Roofing</li><li>Factory Roof Systems</li><li>Heat &amp; Chemical Resistance</li><li>Structural Reinforcement</li></ul>",
+      "statNumber": "99%",
+      "statText": "On-Time Delivery",
+      "bannerImage": {
+        "file": "Service-Banner-Image-1-4.webp",
+        "alt": "",
+        "width": 1440,
+        "height": 578
+      },
+      "overviewTitle": "At Roofaro, we deliver residential roofing solutions designed around durability, safety, and curb appeal. Whether you're building a new home, replacing an aging roof, or repairing storm damage, our certified specialists ensure every project is completed with precision and care.",
+      "overviewImages": [
+        {
+          "file": "d18f9221-b5e3-4e96-8441-72756ffee6a3.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Overview-Image-1-p-130x130q80.webp",
+          "alt": "",
+          "width": 445,
+          "height": 376
+        },
+        {
+          "file": "Service-Details-Image-1.webp",
+          "alt": "",
+          "width": 444,
+          "height": 376
+        }
+      ],
+      "overviewSummary": "Every roofing system is designed for durability, energy efficiency, and a beautiful home exterior you’ll love.",
+      "solutionTitle": "Complete Residential Roofing Services",
+      "solutionSummary": "Everything your home needs for seamless installation and long-term protection solutions.",
+      "solutionImage": {
+        "file": "Our-Solution-Image.webp",
+        "alt": "",
+        "width": 600,
+        "height": 400
+      },
+      "solutionCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1.svg",
+            "alt": ""
+          },
+          "title": "Roof Repairs",
+          "description": "From small leaks to structural issues, we restore roof integrity before minor damage becomes major expense."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2.svg",
+            "alt": ""
+          },
+          "title": "Roof Replacement",
+          "description": "Replace aging or damaged roofing with modern materials designed for better protection and curb appeal."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3.svg",
+            "alt": ""
+          },
+          "title": "Storm Damage Restoration",
+          "description": "Quick and reliable recovery solutions after wind, hail, heavy rain, or unexpected weather damage."
+        }
+      ],
+      "materialTitle": "Roofing Systems Designed for Every Home",
+      "materialSummary": "Choose the right roofing solution built around your home’s style, climate, and long-term protection needs.",
+      "materialCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4.svg",
+            "alt": ""
+          },
+          "title": "Asphalt Shingle Roofing",
+          "description": "An ideal blend of affordability, durability, and design for modern family homes."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-2.svg",
+            "alt": ""
+          },
+          "title": "Metal Roofing",
+          "description": "Engineered for exceptional strength, energy efficiency, and year-round weather resistance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-2.svg",
+            "alt": ""
+          },
+          "title": "Tile Roofing",
+          "description": "Timeless architectural beauty paired with outstanding durability and long-lasting performance."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-2.svg",
+            "alt": ""
+          },
+          "title": "Flat Roofing",
+          "description": "Clean, modern roofing systems designed for contemporary homes and functional outdoor spaces."
+        }
+      ]
+    }
+  ],
+  "works": [
+    {
+      "title": "Builders who need roofing partners to complete projects.",
+      "slug": "builders-who-need-roofing-partners-to-complete-projects",
+      "summary": "Rural locations where agricultural and farm structures need dependable roofing for barns...",
+      "category": "COMPANIES",
+      "thumbnail": {
+        "file": "Work-Thumbnail-2.webp",
+        "alt": "Builders who need roofing partners to complete projects.",
+        "width": 624,
+        "height": 350
+      },
+      "bannerImage": {
+        "file": "Work-Banner-Image-1.webp",
+        "alt": "Builders who need roofing partners to complete projects.",
+        "width": 1280,
+        "height": 640
+      },
+      "projectDuration": "12 Days",
+      "roofArea": "280m²",
+      "energySavings": "25%",
+      "warranty": "20 Years",
+      "buildingTitle": "Building Confidence, One Home at a Time.",
+      "buildingImages": [
+        {
+          "file": "Work-Details-Image-2.webp",
+          "alt": "",
+          "width": 443,
+          "height": 429
+        },
+        {
+          "file": "Work-Details-Image-3.webp",
+          "alt": "",
+          "width": 443,
+          "height": 429
+        }
+      ],
+      "overview": "This residential roofing project was completed for a growing suburban community where homeowners needed stronger protection against seasonal weather, rising maintenance costs, and aging roof systems. PeakShield delivered a complete roofing upgrade focused on durability, energy efficiency, and modern curb appeal.",
+      "overviewImage": {
+        "file": "Work-Sticky-Image.webp",
+        "alt": "",
+        "width": 260,
+        "height": 260
+      },
+      "challengeTitle": "Old Roofs: Time for a Check! The protection is fading.",
+      "challengeSummary": "Homeowners across various properties faced leaks, weakened roofs, poor attic ventilation, and damaged shingles after years of exposure. Small issues turned into costly repairs, prompting families to seek a reliable roofing team to restore safety and efficiency without disrupting their daily lives.",
+      "challengeImage": {
+        "file": "Challange-Image.webp",
+        "alt": "",
+        "width": 630,
+        "height": 472
+      },
+      "approachTitle": "Strategic Restoration. Built for Long-Term Performance.",
+      "approachSummary": "Roofaro created a customized roofing strategy for each home, focusing on its structure and long-term needs. Our experts conducted thorough inspections, reinforced weak framing, enhanced airflow with upgraded ventilation, and used top-quality weather-resistant materials. By executing each step with precision and clear communication, we ensured stronger, safer roofs while minimizing disruption for homeowners.",
+      "approachImage": {
+        "file": "Solution-Image.webp",
+        "alt": "",
+        "width": 630,
+        "height": 472
+      },
+      "impactTitle": "Results That Protect More Than Just Roofs.",
+      "impactSummary": "Every project we complete is measured by durability, efficiency, and the confidence we leave behind. From stronger structures to safer families, our numbers reflect real-world impact built to last.",
+      "impactCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-5.svg",
+            "alt": ""
+          },
+          "title": "42 Homes Protected",
+          "description": "Complete essential community-wide roofing upgrades now."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-3.svg",
+            "alt": ""
+          },
+          "title": "35% Energy Efficiency",
+          "description": "Enhanced insulation and ventilation for year-round comfort in every home."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-3.svg",
+            "alt": ""
+          },
+          "title": "100% On-Time Completion",
+          "description": "Projects delivered exactly as promised with zero unexpected delays."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-3.svg",
+            "alt": ""
+          },
+          "title": "Zero Safety Incidents",
+          "description": "Clean, organized, and professionally managed worksites from start to finish."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4-2.svg",
+            "alt": ""
+          },
+          "title": "25+ Years of Craftsmanship",
+          "description": "Decades of roofing expertise trusted by homeowners across every season."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-5-2.svg",
+            "alt": ""
+          },
+          "title": "98% Client Satisfaction",
+          "description": "Built on clear communication, expert craftsmanship, and lasting results."
+        }
+      ]
+    },
+    {
+      "title": "Businesses looking for strong, low-maintenance roofing",
+      "slug": "businesses-looking-for-strong-low-maintenance-roofing",
+      "summary": "Growing suburban neighborhoods with newly built homes requiring professional installation and finishing.",
+      "category": "COMMERCIAL PROPERTY",
+      "thumbnail": {
+        "file": "Work-Thumbnail-1.webp",
+        "alt": "Businesses looking for strong, low-maintenance roofing",
+        "width": 624,
+        "height": 350
+      },
+      "bannerImage": {
+        "file": "Work-Banner-Image.webp",
+        "alt": "Businesses looking for strong, low-maintenance roofing",
+        "width": 1280,
+        "height": 640
+      },
+      "projectDuration": "12 Days",
+      "roofArea": "280m²",
+      "energySavings": "25%",
+      "warranty": "20 Years",
+      "buildingTitle": "Building Confidence, One Home at a Time.",
+      "buildingImages": [
+        {
+          "file": "Work-Details-Image-2.webp",
+          "alt": "",
+          "width": 443,
+          "height": 429
+        },
+        {
+          "file": "Work-Details-Image-3.webp",
+          "alt": "",
+          "width": 443,
+          "height": 429
+        }
+      ],
+      "overview": "This residential roofing project was completed for a growing suburban community where homeowners needed stronger protection against seasonal weather, rising maintenance costs, and aging roof systems. PeakShield delivered a complete roofing upgrade focused on durability, energy efficiency, and modern curb appeal.",
+      "overviewImage": {
+        "file": "Work-Sticky-Image.webp",
+        "alt": "",
+        "width": 260,
+        "height": 260
+      },
+      "challengeTitle": "Old Roofs: Time for a Check! The protection is fading.",
+      "challengeSummary": "Homeowners across various properties faced leaks, weakened roofs, poor attic ventilation, and damaged shingles after years of exposure. Small issues turned into costly repairs, prompting families to seek a reliable roofing team to restore safety and efficiency without disrupting their daily lives.",
+      "challengeImage": {
+        "file": "Challange-Image.webp",
+        "alt": "",
+        "width": 630,
+        "height": 472
+      },
+      "approachTitle": "Strategic Restoration. Built for Long-Term Performance.",
+      "approachSummary": "Roofaro created a customized roofing strategy for each home, focusing on its structure and long-term needs. Our experts conducted thorough inspections, reinforced weak framing, enhanced airflow with upgraded ventilation, and used top-quality weather-resistant materials. By executing each step with precision and clear communication, we ensured stronger, safer roofs while minimizing disruption for homeowners.",
+      "approachImage": {
+        "file": "Solution-Image.webp",
+        "alt": "",
+        "width": 630,
+        "height": 472
+      },
+      "impactTitle": "Results That Protect More Than Just Roofs.",
+      "impactSummary": "Every project we complete is measured by durability, efficiency, and the confidence we leave behind. From stronger structures to safer families, our numbers reflect real-world impact built to last.",
+      "impactCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-5.svg",
+            "alt": ""
+          },
+          "title": "42 Homes Protected",
+          "description": "Complete essential community-wide roofing upgrades now."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-3.svg",
+            "alt": ""
+          },
+          "title": "35% Energy Efficiency",
+          "description": "Enhanced insulation and ventilation for year-round comfort in every home."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-3.svg",
+            "alt": ""
+          },
+          "title": "100% On-Time Completion",
+          "description": "Projects delivered exactly as promised with zero unexpected delays."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-3.svg",
+            "alt": ""
+          },
+          "title": "Zero Safety Incidents",
+          "description": "Clean, organized, and professionally managed worksites from start to finish."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4-2.svg",
+            "alt": ""
+          },
+          "title": "25+ Years of Craftsmanship",
+          "description": "Decades of roofing expertise trusted by homeowners across every season."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-5-2.svg",
+            "alt": ""
+          },
+          "title": "98% Client Satisfaction",
+          "description": "Built on clear communication, expert craftsmanship, and lasting results."
+        }
+      ]
+    },
+    {
+      "title": "Families and individuals who want secure, long-lasting roofs",
+      "slug": "families-and-individuals-who-want-secure-long-lasting-roofs",
+      "summary": "Urban residential communities where we support families needing durable, long-term roof protection.",
+      "category": "HOMEOWNERS",
+      "thumbnail": {
+        "file": "Work-Thumbnail.webp",
+        "alt": "Families and individuals who want secure, long-lasting roofs",
+        "width": 624,
+        "height": 350
+      },
+      "bannerImage": {
+        "file": "Work-Banner-Image-2.webp",
+        "alt": "Families and individuals who want secure, long-lasting roofs",
+        "width": 1280,
+        "height": 640
+      },
+      "projectDuration": "12 Days",
+      "roofArea": "280m²",
+      "energySavings": "25%",
+      "warranty": "20 Years",
+      "buildingTitle": "Building Confidence, One Home at a Time.",
+      "buildingImages": [
+        {
+          "file": "Work-Details-Image-2.webp",
+          "alt": "",
+          "width": 443,
+          "height": 429
+        },
+        {
+          "file": "Work-Details-Image-3.webp",
+          "alt": "",
+          "width": 443,
+          "height": 429
+        }
+      ],
+      "overview": "This residential roofing project was completed for a growing suburban community where homeowners needed stronger protection against seasonal weather, rising maintenance costs, and aging roof systems. PeakShield delivered a complete roofing upgrade focused on durability, energy efficiency, and modern curb appeal.",
+      "overviewImage": {
+        "file": "Work-Sticky-Image.webp",
+        "alt": "",
+        "width": 260,
+        "height": 260
+      },
+      "challengeTitle": "Old Roofs: Time for a Check! The protection is fading.",
+      "challengeSummary": "Homeowners across various properties faced leaks, weakened roofs, poor attic ventilation, and damaged shingles after years of exposure. Small issues turned into costly repairs, prompting families to seek a reliable roofing team to restore safety and efficiency without disrupting their daily lives.",
+      "challengeImage": {
+        "file": "Challange-Image.webp",
+        "alt": "",
+        "width": 630,
+        "height": 472
+      },
+      "approachTitle": "Strategic Restoration. Built for Long-Term Performance.",
+      "approachSummary": "Roofaro created a customized roofing strategy for each home, focusing on its structure and long-term needs. Our experts conducted thorough inspections, reinforced weak framing, enhanced airflow with upgraded ventilation, and used top-quality weather-resistant materials. By executing each step with precision and clear communication, we ensured stronger, safer roofs while minimizing disruption for homeowners.",
+      "approachImage": {
+        "file": "Solution-Image.webp",
+        "alt": "",
+        "width": 630,
+        "height": 472
+      },
+      "impactTitle": "Results That Protect More Than Just Roofs.",
+      "impactSummary": "Every project we complete is measured by durability, efficiency, and the confidence we leave behind. From stronger structures to safer families, our numbers reflect real-world impact built to last.",
+      "impactCards": [
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-5.svg",
+            "alt": ""
+          },
+          "title": "42 Homes Protected",
+          "description": "Complete essential community-wide roofing upgrades now."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-1-3.svg",
+            "alt": ""
+          },
+          "title": "35% Energy Efficiency",
+          "description": "Enhanced insulation and ventilation for year-round comfort in every home."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-2-3.svg",
+            "alt": ""
+          },
+          "title": "100% On-Time Completion",
+          "description": "Projects delivered exactly as promised with zero unexpected delays."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-3-3.svg",
+            "alt": ""
+          },
+          "title": "Zero Safety Incidents",
+          "description": "Clean, organized, and professionally managed worksites from start to finish."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-4-2.svg",
+            "alt": ""
+          },
+          "title": "25+ Years of Craftsmanship",
+          "description": "Decades of roofing expertise trusted by homeowners across every season."
+        },
+        {
+          "icon": {
+            "file": "Innovation-Icon-Container-5-2.svg",
+            "alt": ""
+          },
+          "title": "98% Client Satisfaction",
+          "description": "Built on clear communication, expert craftsmanship, and lasting results."
+        }
+      ]
+    }
+  ]
+}

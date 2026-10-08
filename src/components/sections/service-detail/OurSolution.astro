@@ -1,0 +1,47 @@
+---
+import Button from '../../ui/Button.astro';
+import FeatureCard from '../../cards/FeatureCard.astro';
+import { mediaUrl, mediaSrcset } from '../../../lib/strapi';
+import type { Service } from '../../../lib/types';
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+const srcset = mediaSrcset(service.solutionImage);
+---
+
+<section class="section_our-solution">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="our-solution-wrapper">
+        <div class="our-solution-left-block">
+          <div class="section-heading-block bottom-gap-none">
+            <div class="section-heading-text-block">
+              <div reveal-0s="" class="section-subtitle-block bottom-space">
+                <div class="subtitle-dot"></div>
+                <p class="subtitle-text">OUR SOLUTIONS</p>
+              </div>
+              <div class="section-title-block max-width-30">
+                <h2 section-title="" class="heading-style-2 title-animation">{service.solutionTitle}</h2>
+              </div>
+            </div>
+            <div reveal-2s="" class="section-summary-block top-space max-width-28">
+              <p class="text-size-large">{service.solutionSummary}</p>
+            </div>
+            <div reveal-4s="" class="section-button-block top-space">
+              <Button kind="primary" variant="v2" href="/contact" text="Free Inspection" />
+            </div>
+          </div>
+          <div reveal-6s="" class="our-solution-image-block"><img src={mediaUrl(service.solutionImage)} loading="lazy" alt={service.solutionImage?.alternativeText ?? ''} sizes={srcset ? '(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939px' : undefined} srcset={srcset} class="our-solution-image" /></div>
+        </div>
+        <div class="our-solution-right-block">
+          {service.solutionCards.map((card) => (
+            <FeatureCard card={card} blockClass="our-solution-point-block" contentClass="our-solution-point-content" reveal="reveal-4s" />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

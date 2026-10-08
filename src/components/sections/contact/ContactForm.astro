@@ -1,0 +1,131 @@
+---
+import { site } from '../../../config/site';
+import { getServices } from '../../../lib/cms';
+
+const services = await getServices();
+---
+
+<section class="section_contact">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="contact-wrapper">
+        <div class="contact-content-block">
+          <div id="contact-form" to-top-6s="" class="contact-form-block w-form">
+            <form id="wf-form-contact-form" name="wf-form-contact-form" data-name="contact-form" method="get" class="contact-form-inner" data-wf-page-id="6ac67a406e52317ce52b458b" data-wf-element-id="4324c71e-6696-03e2-ab51-2d91a24ae5a6">
+              <div class="contact-form-content">
+                <div class="form-heading-block">
+                  <h2 class="heading-style-5">Get in Touch</h2>
+                </div>
+                <div class="form-field-row">
+                  <div class="form-field-block"><label for="First-Name" class="form-field-label">First Name</label><input class="form-text-field w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="ex. John" type="text" id="First-Name" required=""></div>
+                  <div class="form-field-block"><label for="Last-Name" class="form-field-label">Last Name</label><input class="form-text-field w-input" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Doe" type="text" id="Last-Name" required=""></div>
+                </div>
+                <div class="form-field-row">
+                  <div class="form-field-block"><label for="Email-Address" class="form-field-label">Email Address</label><input class="form-text-field w-input" maxlength="256" name="Email-Address" data-name="Email Address" placeholder="hello@example.com" type="email" id="Email-Address" required=""></div>
+                  <div class="form-field-block"><label for="field" class="form-field-label">Service Required</label><select id="field" name="Service-Required" data-name="Service Required" class="form-text-field select w-select">
+                      <option value="">None</option>
+                      {services.map((service) => <option value={service.name}>{service.name}</option>)}
+                    </select></div>
+                </div>
+                <div class="form-field-block"><label for="Message" class="form-field-label">Message</label><textarea placeholder="Write your message here" maxlength="5000" id="Message" name="Message" data-name="Message" class="form-text-field large w-input"></textarea></div>
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+                <div class="form-button-block"><input type="submit" data-wait="Please wait..." class="form-button w-button" value="Send A Message"></div>
+              </div>
+            </form>
+            <div class="success-message w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+          <div to-top-8s="" class="contact-image-block"><img src="/images/Contact-Image-2.webp" loading="lazy" sizes="(max-width: 562px) 100vw, 562px" srcset="/images/Contact-Image-2-p-500.webp 500w, /images/Contact-Image-2.webp 562w" alt="Red wooden house with a steep tiled roof surrounded by trees and wildflowers in a green landscape." class="contact-image"></div>
+        </div>
+        <div class="contact-info-wrapper">
+          <div reveal-0s="" class="contact-single-info-block">
+            <div class="contact-info-icon-block">
+              <div class="contact-info-icon w-embed"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_190_10843)">
+                    <path d="M5.83333 4.66602H10.5L12.8333 10.4993L9.91667 12.2493C11.1661 14.7828 13.2165 16.8332 15.75 18.0827L17.5 15.166L23.3333 17.4993V22.166C23.3333 22.7849 23.0875 23.3783 22.6499 23.8159C22.2123 24.2535 21.6188 24.4994 21 24.4994C16.4491 24.2228 12.1568 22.2903 8.93297 19.0664C5.70909 15.8425 3.77656 11.5502 3.5 6.99935C3.5 6.38051 3.74583 5.78702 4.18342 5.34943C4.621 4.91185 5.21449 4.66602 5.83333 4.66602Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M17.5 8.16602C18.1188 8.16602 18.7123 8.41185 19.1499 8.84943C19.5875 9.28702 19.8333 9.88051 19.8333 10.4993" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M17.5 3.5C19.3565 3.5 21.137 4.2375 22.4497 5.55025C23.7625 6.86301 24.5 8.64348 24.5 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_190_10843">
+                      <rect width="28" height="28" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div to-top-4="" class="contact-info-text-block">
+              <h3 class="heading-style-6">Phone</h3>
+              <a href={`tel:${site.contact.phoneHref}`} class="contact-info-text">{site.contact.phone}</a>
+            </div>
+          </div>
+          <div reveal-2s="" class="contact-single-info-block">
+            <div class="contact-info-icon-block">
+              <div class="contact-info-icon w-embed"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_190_10853)">
+                    <path d="M3.5 8.16732C3.5 7.54848 3.74583 6.95499 4.18342 6.5174C4.621 6.07982 5.21449 5.83398 5.83333 5.83398H22.1667C22.7855 5.83398 23.379 6.07982 23.8166 6.5174C24.2542 6.95499 24.5 7.54848 24.5 8.16732V19.834C24.5 20.4528 24.2542 21.0463 23.8166 21.4839C23.379 21.9215 22.7855 22.1673 22.1667 22.1673H5.83333C5.21449 22.1673 4.621 21.9215 4.18342 21.4839C3.74583 21.0463 3.5 20.4528 3.5 19.834V8.16732Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3.5 8.16602L14 15.166L24.5 8.16602" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_190_10853">
+                      <rect width="28" height="28" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div to-top-4="" class="contact-info-text-block">
+              <h3 class="heading-style-6">Email</h3>
+              <a href={`mailto:${site.contact.email}`} class="contact-info-text">{site.contact.email}</a>
+            </div>
+          </div>
+          <div reveal-4s="" class="contact-single-info-block">
+            <div class="contact-info-icon-block">
+              <div class="contact-info-icon w-embed"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_190_10862)">
+                    <path d="M3.5 14C3.5 15.3789 3.77159 16.7443 4.29926 18.0182C4.82694 19.2921 5.60036 20.4496 6.57538 21.4246C7.55039 22.3996 8.70791 23.1731 9.98182 23.7007C11.2557 24.2284 12.6211 24.5 14 24.5C15.3789 24.5 16.7443 24.2284 18.0182 23.7007C19.2921 23.1731 20.4496 22.3996 21.4246 21.4246C22.3996 20.4496 23.1731 19.2921 23.7007 18.0182C24.2284 16.7443 24.5 15.3789 24.5 14C24.5 12.6211 24.2284 11.2557 23.7007 9.98182C23.1731 8.70791 22.3996 7.55039 21.4246 6.57538C20.4496 5.60036 19.2921 4.82694 18.0182 4.29927C16.7443 3.77159 15.3789 3.5 14 3.5C12.6211 3.5 11.2557 3.77159 9.98182 4.29927C8.70791 4.82694 7.55039 5.60036 6.57538 6.57538C5.60036 7.55039 4.82694 8.70791 4.29926 9.98182C3.77159 11.2557 3.5 12.6211 3.5 14Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14 13.9993L17.5 11.666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14 8.16602V13.9993" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_190_10862">
+                      <rect width="28" height="28" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div to-top-4="" class="contact-info-text-block">
+              <h3 class="heading-style-6">Business Hours</h3>
+              <div class="contact-info-text hover-none">Mon - Fri: 7:00 AM - 5:00 PM<br>Emergency available 24/7</div>
+            </div>
+          </div>
+          <div reveal-6s="" class="contact-single-info-block">
+            <div class="contact-info-icon-block">
+              <div class="contact-info-icon w-embed"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_190_10872)">
+                    <path d="M10.5 12.834C10.5 13.7622 10.8687 14.6525 11.5251 15.3089C12.1815 15.9652 13.0717 16.334 14 16.334C14.9283 16.334 15.8185 15.9652 16.4749 15.3089C17.1313 14.6525 17.5 13.7622 17.5 12.834C17.5 11.9057 17.1313 11.0155 16.4749 10.3591C15.8185 9.70273 14.9283 9.33398 14 9.33398C13.0717 9.33398 12.1815 9.70273 11.5251 10.3591C10.8687 11.0155 10.5 11.9057 10.5 12.834Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M20.6002 19.4328L15.65 24.383C15.2125 24.8201 14.6193 25.0656 14.0009 25.0656C13.3825 25.0656 12.7893 24.8201 12.3518 24.383L7.4005 19.4328C6.09525 18.1275 5.20639 16.4645 4.8463 14.654C4.48621 12.8435 4.67107 10.9669 5.3775 9.26151C6.08393 7.55609 7.28021 6.09846 8.81506 5.07292C10.3499 4.04738 12.1544 3.5 14.0003 3.5C15.8463 3.5 17.6508 4.04738 19.1856 5.07292C20.7204 6.09846 21.9167 7.55609 22.6232 9.26151C23.3296 10.9669 23.5144 12.8435 23.1544 14.654C22.7943 16.4645 21.9054 18.1275 20.6002 19.4328Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_190_10872">
+                      <rect width="28" height="28" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div to-top-4="" class="contact-info-text-block">
+              <h3 class="heading-style-6">Location</h3>
+              <div class="contact-info-text hover-none">{site.contact.address}<br />Serving all nearby areas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

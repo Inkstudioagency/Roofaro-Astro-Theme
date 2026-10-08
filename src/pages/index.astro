@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/home/Hero.astro';
+import AboutIntro from '../components/sections/home/AboutIntro.astro';
+import ServicesSlider from '../components/sections/home/ServicesSlider.astro';
+import Partners from '../components/sections/home/Partners.astro';
+import Expertise from '../components/sections/home/Expertise.astro';
+import Process from '../components/sections/shared/Process.astro';
+import WhyChoose from '../components/sections/home/WhyChoose.astro';
+import Works from '../components/sections/home/Works.astro';
+import Testimonials from '../components/sections/shared/Testimonials.astro';
+import Faq from '../components/sections/shared/Faq.astro';
+import Cta from '../components/sections/shared/Cta.astro';
+import { site, wfPages } from '../config/site';
+import { faq } from '../data/faq';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: site.defaultTitle,
+  description: site.defaultDescription,
+  url: new URL('/', Astro.site ?? site.url).toString(),
+  inLanguage: site.locale,
+  mainEntity: {
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  },
+};
+---
+
+<BaseLayout title={site.defaultTitle} description={site.defaultDescription} wfPage={wfPages.home} jsonLd={jsonLd}>
+  <Hero />
+  <AboutIntro />
+  <ServicesSlider />
+  <Partners />
+  <Expertise />
+  <Process />
+  <WhyChoose />
+  <Works />
+  <Testimonials />
+  <Faq />
+  <Cta />
+</BaseLayout>

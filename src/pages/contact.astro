@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactHero from '../components/sections/contact/ContactHero.astro';
+import ContactForm from '../components/sections/contact/ContactForm.astro';
+import { wfPages } from '../config/site';
+---
+
+<BaseLayout title="Contact || Roofing Services Astro Theme" wfPage={wfPages.contact}>
+  <ContactHero />
+  <ContactForm />
+</BaseLayout>

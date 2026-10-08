@@ -1,0 +1,32 @@
+---
+import { mediaUrl, mediaSrcset } from '../../lib/strapi';
+import { workHref } from '../../lib/cms';
+import type { Work } from '../../lib/types';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const href = workHref(work);
+const srcset = mediaSrcset(work.thumbnail);
+---
+
+<div role="listitem" class="works-collection-item w-dyn-item">
+  <div class="works-item-card-block">
+    <a aria-label={work.title} href={href} class="works-item-image-block w-inline-block"><img src={mediaUrl(work.thumbnail)} loading="lazy" width="Auto" alt={work.thumbnail?.alternativeText ?? work.title} sizes={srcset ? '100vw' : undefined} srcset={srcset} class="works-item-image" /></a>
+    <div class="works-item-content-block">
+      <div class="works-item-text-block">
+        <div class="works-item-subtitle-block">
+          <p class="works-item-subtitle">{work.category}</p>
+        </div>
+        <a aria-label={work.title} href={href} class="works-item-title-block w-inline-block">
+          <h3 class="works-item-title">{work.title}</h3>
+        </a>
+        <div class="works-item-summary-block">
+          <p class="text-size-large text-color-gray-400">{work.summary}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

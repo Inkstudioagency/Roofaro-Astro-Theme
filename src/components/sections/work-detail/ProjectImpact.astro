@@ -1,0 +1,40 @@
+---
+import FeatureCard from '../../cards/FeatureCard.astro';
+import type { Work } from '../../../lib/types';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+---
+
+<section class="section_impact">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="impact-wrapper">
+        <div class="impact-left-block">
+          <div class="section-heading-block bottom-gap-none">
+            <div class="section-heading-text-block">
+              <div reveal-0s="" class="section-subtitle-block bottom-space">
+                <div class="subtitle-dot"></div>
+                <p class="subtitle-text text-color-white">PROJECT IMPACT</p>
+              </div>
+              <div class="section-title-block">
+                <h2 section-title="" class="heading-style-2 text-color-white">{work.impactTitle}</h2>
+              </div>
+            </div>
+            <div reveal-2s="" class="section-summary-block top-space">
+              <p class="text-size-large text-color-gray-400">{work.impactSummary}</p>
+            </div>
+          </div>
+        </div>
+        <div class="impact-right-block">
+          {work.impactCards.map((card) => (
+            <FeatureCard card={card} blockClass="impact-card-block" contentClass="impact-card-content" reveal="reveal-4s" />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+import { site } from '../../config/site';
+import { headerNav, headerCta, isCurrent } from '../../config/navigation';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  /** `v2` is the utility-page variant (404). */
+  variant?: 'v1' | 'v2';
+}
+
+const { variant = 'v1' } = Astro.props;
+const path = Astro.url.pathname;
+const homeCurrent = isCurrent('/', path);
+const current = (href: string) => (isCurrent(href, path) ? { 'aria-current': 'page' as const } : {});
+---
+
+<header
+  data-wf--section-header--variant={variant}
+  class:list={['section_header', variant === 'v2' && 'w-variant-7a2084f1-1247-c881-7f11-8c36160349bd']}
+>
+  <div data-animation="over-right" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+    <div class="nav-inner-block">
+      <div class="container-main w-container">
+        <div class="nav-content-block">
+          <a href="/" {...current('/')} class:list={['brand-logo-block w-nav-brand', homeCurrent && 'w--current']}><img loading="lazy" src={site.logo.src} alt={site.logo.alt} class="brand-logo" /></a>
+          <nav role="navigation" class="nav-menu-content w-nav-menu">
+            <div class="nav-link-block">
+              <div class="nav-menu-top">
+                <a href="/" {...current('/')} class:list={['brand-logo-block w-nav-brand', homeCurrent && 'w--current']}><img loading="lazy" src={site.logoLight.src} alt={site.logoLight.alt} class="brand-logo" /></a>
+                <div class="menu-button-block">
+                  <div class="menu-close-button w-nav-button" aria-label="Close menu">
+                    <div class="menu-button-icon w-icon-nav-menu"></div>
+                  </div>
+                </div>
+              </div>
+              {headerNav.map((link) => (
+                <a href={link.href} {...current(link.href)} class:list={['nav-link-item w-nav-link', isCurrent(link.href, path) && 'w--current']}>{link.label}</a>
+              ))}
+              <div class="general-button-block is-1">
+                <Button kind="secondary" href={headerCta.href} text={headerCta.label} />
+              </div>
+            </div>
+          </nav>
+          <div class="nav-button-block">
+            <div class="general-button-block is-2">
+              <Button kind="secondary" href={headerCta.href} text={headerCta.label} />
+            </div>
+            <div class="menu-button-block">
+              <div class="menu-open-button w-nav-button" aria-label="Open menu">
+                <div class="menu-button-icon w-icon-nav-menu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

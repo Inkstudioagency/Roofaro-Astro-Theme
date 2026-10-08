@@ -1,0 +1,45 @@
+---
+import { faq } from '../../../data/faq';
+---
+
+<!-- Accordion open/close is driven by the interaction runtime (data-wf-component-id must stay). -->
+<section data-wf-component-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0b6" data-wf-variant-state="base" class="section_faq">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="faq-wrapper">
+        <div class="faq-heading-block">
+          <div class="section-heading-block bottom-gap-none">
+            <div reveal-0s="" class="section-subtitle-block bottom-space">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text">FAQ</p>
+            </div>
+            <div class="section-title-block">
+              <h2 section-title="" class="heading-style-2">Frequently Asked Questions</h2>
+            </div>
+            <div reveal-2s="" class="section-summary-block top-space">
+              <p class="text-size-regular">Everything you need to know about our roofing services, pricing, and warranties — all in one place.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-content-block">
+          {faq.map((item) => (
+            <div reveal-2s="" class="faq-dropdown-block">
+              <div class="faq-dropdown-question-block">
+                <p class="text-size-large text-weight-semibold heading-text-color">{item.question}</p>
+                <div class="faq-dropdown-icon-block">
+                  <div class="faq-icon-line"></div>
+                  <div class="faq-icon-line is-2"></div>
+                </div>
+              </div>
+              <div class="faq-dropdown-ans-block">
+                <div class="faq-dropdown-ans-inner">
+                  <p class="text-size-regular">{item.answer}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

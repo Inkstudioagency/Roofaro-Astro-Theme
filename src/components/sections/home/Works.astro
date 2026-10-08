@@ -1,0 +1,42 @@
+---
+import WorkCard from '../../cards/WorkCard.astro';
+import { getWorks } from '../../../lib/cms';
+
+const works = await getWorks();
+---
+
+<section id="section_works" class="section_works">
+  <div class="section-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="works-wrapper">
+        <div class="section-heading-block bottom-space-btwn">
+          <div class="section-heading-text-block">
+            <div reveal-0s="" class="section-subtitle-block bottom-space">
+              <div class="subtitle-dot"></div>
+              <p class="subtitle-text text-color-white">OUR EXPERTISE</p>
+            </div>
+            <div class="section-title-block max-width-40">
+              <h2 section-title="" class="heading-style-2 text-color-white">Metal Roofing Experts. Structural Protection Masters.</h2>
+            </div>
+          </div>
+          <div reveal-2s="" class="section-summary-block max-width-24">
+            <p class="text-size-large text-color-gray-400">Expert residential &amp; commercial roofing services backed by quality materials, certified professionals, and long-term warranties.</p>
+          </div>
+        </div>
+        <div reveal-2s="" class="works-content-block">
+          <div class="works-collection-block w-dyn-list">
+            {works.length > 0 ? (
+              <div role="list" class="works-collection-list w-dyn-items">
+                {works.map((work) => <WorkCard work={work} />)}
+              </div>
+            ) : (
+              <div class="w-dyn-empty">
+                <div>No items found.</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

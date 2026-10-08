@@ -1,0 +1,45 @@
+---
+/**
+ * The theme's pill button with the sliding arrow (hover animation comes from the
+ * `button-hover` attribute, handled by the interaction runtime).
+ *   primary   v1 = dark,  v2 = light
+ *   secondary v1 = light, v2 = dark-on-light (CTA)
+ */
+interface Props {
+  kind?: 'primary' | 'secondary';
+  variant?: 'v1' | 'v2';
+  href: string;
+  text: string;
+  target?: string;
+}
+
+const { kind = 'primary', variant = 'v1', href, text, target } = Astro.props;
+
+// Webflow component-variant classes the CSS keys on.
+const variantClass: Record<string, string> = {
+  'primary-v2': 'w-variant-1e249c7c-9844-f813-8efb-b12d0b234c36',
+  'secondary-v2': 'w-variant-5f90a936-79e2-3785-50a0-7e88f335f163',
+};
+const isExternal = /^https?:\/\//.test(href);
+---
+
+<a
+  href={href}
+  button-hover=""
+  {...{ [`data-wf--${kind}-button--variant`]: variant }}
+  class:list={[`${kind}-button`, variantClass[`${kind}-${variant}`], 'w-inline-block']}
+  target={target}
+  rel={target === '_blank' || isExternal ? 'noopener' : undefined}
+>
+  <div class="button-content-block">
+    <div class="button-text-block">
+      <div class="button-text">{text}</div>
+    </div>
+    <div class="button-icon-block">
+      <div class="button-icon w-embed"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 7.53027H14M7 14.5303L14 7.53027L7 0.530273" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</a>

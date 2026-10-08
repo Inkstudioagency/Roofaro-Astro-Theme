@@ -1,0 +1,33 @@
+---
+import type { TeamMember } from '../../data/team';
+
+interface Props {
+  member: TeamMember;
+  /** Scroll-reveal attribute: `reveal-2s` in the desktop grid, `to-top-4` in the mobile slider. */
+  reveal: string;
+}
+
+const { member, reveal } = Astro.props;
+---
+
+<div {...{ [reveal]: '' }} class="team-card-block">
+  <div class="team-card-image-block"><img src={member.image} loading="lazy" alt={member.name} class="team-card-image" /></div>
+  <div class="team-card-content-block">
+    <div class="team-card-top-content-block">
+      <div class="team-name-block">
+        <h3 class="text-size-xlarge">{member.name}</h3>
+      </div>
+      <div class="team-designation-block">
+        <p class="text-size-small">{member.role}</p>
+      </div>
+    </div>
+    <div class="team-card-social-block">
+      <a aria-label={`${member.name} on X`} href={member.social} target="_blank" rel="noopener" class="team-social-link-block w-inline-block">
+        <div class="team-social-icon w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14L7.03226 8.96774M14 2L8.96774 7.03226M7.03226 8.96774L10.6667 14H14L8.96774 7.03226L5.33333 2H2L7.03226 8.96774Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
