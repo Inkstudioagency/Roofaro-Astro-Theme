@@ -1,5 +1,7 @@
 # Roofaro — Roofing Company Theme for Astro
 
+**Live demo:** https://roofaro-astro.vercel.app
+
 Roofaro is a modern website theme for roofing contractors and construction businesses, built with **Astro 7** and **Strapi 5**. It ships a full marketing site with smooth scroll animations, sliders, a contact form, and two CMS-driven collections: **Services** and **Works** (case studies).
 
 ## Features
